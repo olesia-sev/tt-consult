@@ -1,0 +1,27 @@
+/*resolutions*/
+$desktop: 1200px;
+$laptop: 960px;
+$tablets: 768px;
+$phones480: 480px;
+$phones: 320px;
+
+/*colors*/
+$light: rgb(246, 242, 242);
+$pink: rgb(233, 169, 169);
+$blue: rgb(204, 204, 204);
+$purple: rgb(206, 25, 133);
+$bright-blue: rgb(25, 43, 206);
+$brown: rgb(212, 196, 122);
+
+/*общее*/
+@import '_misc/fonts';
+@import '_misc/mixins';
+@import 'common/global';
+
+/*common*/
+@import 'common/header';
+@import 'common/submenu';
+@import 'common/content';
+@import 'common/navigation';
+@import 'common/sidebar';
+@import 'common/form';

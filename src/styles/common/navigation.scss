@@ -1,0 +1,25 @@
+.navigation {
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+  &__item {
+    margin-right: 4px;
+    color: #040303;
+    font-size: 14px;
+    line-height: 24px;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+
+    &:hover {
+      color: #d62020;
+    }
+
+    &--ative {
+      color: #d62020;
+    }
+  }
+}

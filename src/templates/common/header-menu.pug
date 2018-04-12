@@ -1,0 +1,91 @@
+.header__menu
+    mixin list(data)
+        ul.header__list
+            each item in data.items
+                li.header__item(onclick="")
+                    a.header__link(href= item.href, title= item.title) #{item.text}
+                    if item.sublevel
+                        +list(item)
+    -
+        var data = {
+            'title': 'title text',
+            'items': [
+                {
+                title: 'Знакомства',
+                href: '#',
+                text: 'Знакомства',
+                sublevel: true,
+                items: [
+                {
+                    title: 'Lorem',
+                    href: '#',
+                    text: 'Lorem'
+                },
+                {
+                    title: 'Ipsum',
+                    href: '#',
+                    text: 'Ipsum'
+                },
+                {
+                    title: 'Dolor',
+                    href: '#',
+                    text: 'Dolor'
+                }
+            ]
+            },
+            {
+                title: 'Места',
+                href: '#',
+                text: 'Места'
+            },
+            {
+                title: 'Общение',
+                href: '#',
+                text: 'Общение',
+                sublevel: true,
+                items: [
+                {
+                    title: 'Написать сообщение',
+                    href: '#',
+                    text: 'Написать сообщение'
+                },
+                {
+                    title: 'Чаты',
+                    href: '#',
+                    text: 'Чаты'
+                },
+                {
+                    title: 'Симпатии',
+                    href: '#',
+                    text: 'Симпатии'
+                },
+                {
+                    title: 'Опросы',
+                    href: '#',
+                    text: 'Опросы'
+                }
+                ]
+            },
+            {
+                title: 'Блог',
+                href: '#',
+                text: 'Блог'
+            },
+            {
+                title: 'Новое',
+                href: '#',
+                text: 'Новое'
+            },
+            {
+                title: 'Конкурсы',
+                href: '#',
+                text: 'Конкурсы'
+            },
+            {
+                title: 'О проекте',
+                href: '#',
+                text: 'О проекте'
+            }
+            ]
+        }
+    +list(data)

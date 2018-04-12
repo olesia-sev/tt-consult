@@ -1,0 +1,19 @@
+extends ../template
+
+block content
+    .wrapper
+        .container
+            header.header
+                include ../common/header-menu
+            main.main
+                .content
+                    include ../common/main-content-list
+                nav.navigation
+                        ul.navigation__list
+                          each val in [1, 2, 3]
+                              li.navigation__item
+                                  a(href='#').navigation__link= val
+        aside.sidebar
+            include ../common/form
+    a.sidebar-toggle(href='#')
+        img.sidebar-toggle__img(src='assets/images/icons/arrow.svg', alt='изоюражение стрелки, которая открывает форму для заполнения')

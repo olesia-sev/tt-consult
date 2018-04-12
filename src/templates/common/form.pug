@@ -1,0 +1,17 @@
+.form-wrap
+    form.form
+        .form__row
+            label.form__label
+                input(type='email' name='email' placeholder='Текстовое поле' required).form__input
+        .form__row
+            label.form__label
+                input(type='password' name='password' placeholder='∗∗∗∗∗∗∗∗' required minlength='6').form__input
+        .form__row
+            label.form__label-checkbox
+                input(type='checkbox' checked name='agreement').form__checkbox
+                span.form__checkbox--fake
+                span.form__text Я согласен с пользовательским соглашением
+        .form__row
+            .form__buttons
+                input(type='submit' name='form__submit' value='Отправить').form__submit
+                input(type='reset' name='form__reset' value='Сбросить').form__reset

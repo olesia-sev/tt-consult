@@ -1,0 +1,59 @@
+.sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 30%;
+  background-color: #000;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+
+  @include laptop {
+    //display: none;
+    position: absolute;
+    left: -90%;
+    opacity: 0;
+  }
+}
+
+/*сайдбар на мобильных устройствах*/
+.sidebar-toggle {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  display: none;
+
+  @include laptop {
+    display: block;
+    z-index: 5;
+  }
+
+  &__img {
+    width: 100%;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+  }
+}
+
+.open {
+  left: 0;
+  width: 90%;
+  opacity: 1;
+}
+
+.display-none {
+  display: none;
+}
