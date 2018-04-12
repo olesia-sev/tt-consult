@@ -1,150 +1,150 @@
 input {
-  outline-color: transparent;
+    outline-color: transparent;
 }
 
 .form {
-  margin-top: 80px;
-  padding: 0 20px;
-  display: flex;
-  flex-direction: column;
-  color: #ccc;
-
-  @include laptop {
-    align-items: center;
-  }
-
-  &__row {
-    margin-bottom: 20px;
-  }
-
-  &__input {
-    padding: 5px 10px;
-    border: 1px solid #ccc;
-    background-color: #000;
-    color: #ccc;
-    font-size: 16px;
-    line-height: 24px;
-  }
-
-  &__label-checkbox {
+    margin-top: 80px;
+    padding: 0 20px;
     display: flex;
-  }
-
-  &__checkbox {
-    position: absolute;
-    left: -999999px;
-
-    &--fake {
-      width: 13px;
-      height: 13px;
-      background-color: #ccc;
-      position: relative;
-
-      &:after {
-        content: '';
-        display: block;
-        position: absolute;
-        width: 0;
-        height: 0;
-        top: 50%;
-        left: 50%;
-        -webkit-transform: translate(-50%, -50%);
-        -moz-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        -o-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-      }
-    }
-  }
-
-  &__text {
-    margin-left: 15px;
-    font-size: 16px;
-  }
-
-  &__submit,
-  &__reset {
-    padding: 10px 15px;
-    border: none;
-    font-size: 16px;
-    line-height: 24px;
+    flex-direction: column;
     color: #ccc;
-    -webkit-transition: all .3s;
-    -moz-transition: all .3s;
-    -ms-transition: all .3s;
-    -o-transition: all .3s;
-    transition: all .3s;
-  }
 
-  &__submit {
-    margin-right: 20px;
-    background-color: $purple;
-
-    &:hover {
-      background-color: darken($purple, 8%);
+    @include laptop {
+        align-items: center;
     }
-  }
 
-  &__reset {
-    background-color: $bright-blue;
-
-    &:hover {
-      background-color: darken($bright-blue, 8%);
+    &__row {
+        margin-bottom: 20px;
     }
-  }
+
+    &__input {
+        padding: 5px 10px;
+        border: 1px solid #ccc;
+        background-color: #000;
+        color: #ccc;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    &__label-checkbox {
+        display: flex;
+    }
+
+    &__checkbox {
+        position: absolute;
+        left: -999999px;
+
+        &--fake {
+            width: 13px;
+            height: 13px;
+            background-color: #ccc;
+            position: relative;
+
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 0;
+                height: 0;
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                -moz-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                -o-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+
+    &__text {
+        margin-left: 15px;
+        font-size: 16px;
+    }
+
+    &__submit,
+    &__reset {
+        padding: 10px 15px;
+        border: none;
+        font-size: 16px;
+        line-height: 24px;
+        color: #ccc;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        -ms-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+    }
+
+    &__submit {
+        margin-right: 20px;
+        background-color: $purple;
+
+        &:hover {
+            background-color: darken($purple, 8%);
+        }
+    }
+
+    &__reset {
+        background-color: $bright-blue;
+
+        &:hover {
+            background-color: darken($bright-blue, 8%);
+        }
+    }
 }
 
 .form__checkbox:checked + .form__checkbox--fake:after {
-  width: 8px;
-  height: 8px;
-  background-image: url("../images/icons/check.svg");
-  background-repeat: no-repeat;
-  -webkit-background-size: contain;
-  background-size: contain;
+    width: 8px;
+    height: 8px;
+    background-image: url("../images/icons/check.svg");
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
 }
 
 /* плавное изменение прозрачности  placeholder-а при фокусе */
 input::-webkit-input-placeholder {
-  opacity: 1;
-  transition: opacity .5s ease;
+    opacity: 1;
+    transition: opacity .5s ease;
 }
 
 input::-moz-placeholder {
-  opacity: 1;
-  transition: opacity 0.5s ease;
+    opacity: 1;
+    transition: opacity 0.5s ease;
 }
 
 input:-moz-placeholder {
-  opacity: 1;
-  transition: opacity 0.5s ease;
+    opacity: 1;
+    transition: opacity 0.5s ease;
 }
 
 input:-ms-input-placeholder {
-  opacity: 1;
-  transition: opacity 0.5s ease;
+    opacity: 1;
+    transition: opacity 0.5s ease;
 }
 
 input:focus::-webkit-input-placeholder {
-  opacity: 0;
+    opacity: 0;
 }
 
 input:focus::-moz-placeholder {
-  opacity: 0;
+    opacity: 0;
 }
 
 input:focus:-moz-placeholder {
-  opacity: 0;
+    opacity: 0;
 }
 
 input:focus:-ms-input-placeholder {
-  opacity: 0;
+    opacity: 0;
 }
 
 /*валидация*/
 input:required:valid {
-  border-color: #1dc544;
+    border-color: #1dc544;
 }
 
 input:invalid:not(:placeholder-shown) {
-  border-color: #c5340f;
+    border-color: #c5340f;
 }

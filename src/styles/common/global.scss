@@ -1,21 +1,21 @@
 html {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 body {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font-family: MyriadPro, Arial, Helvetica, sans-serif;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 18px;
-  letter-spacing: 1px;
-  background-color: $light;
-  overflow-x: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: MyriadPro, Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 1px;
+    background-color: $light;
+    overflow-x: hidden;
 }
 
 h1,
@@ -24,50 +24,56 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 ul {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 li {
-  list-style: none;
+    list-style: none;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 .wrapper {
-  position: relative;
-  display: flex;
-  flex-direction: row-reverse;
-  max-width: 960px;
-  min-height: 100%;
-  margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 960px;
+    min-height: 100%;
+    margin: 0 auto;
 }
 
 .container {
-  position: relative;
-  width: 70%;
-  background-color: $light;
+    position: relative;
+    width: 70%;
+    background-color: $light;
 
-  @include laptop {
-    width: 96%;
-    margin: 0 auto;
-  }
+    @include laptop {
+        width: 96%;
+        margin: 0 auto;
+    }
 }
 
 .no-scroll {
-  overflow: hidden;
+    overflow: hidden;
 }

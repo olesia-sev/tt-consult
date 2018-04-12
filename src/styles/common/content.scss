@@ -1,31 +1,31 @@
 .content {
-  padding: 0 10px;
+    padding: 0 10px;
 
-  &__list {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
 
-    @include tablets {
-      justify-content: center;
-    }
-  }
-
-  &__item {
-    width: 21%;
-    min-width: 140px;
-    max-height: 210px;
-    padding: 15px;
-    margin: 0 10px 20px;
-    overflow: hidden;
-    background-color: $brown;
-
-    @include tablets {
-      width: 40%;
+        @include tablets {
+            justify-content: center;
+        }
     }
 
-    @include phones480 {
-      width: 100%;
+    &__item {
+        width: 21%;
+        min-width: 140px;
+        max-height: 210px;
+        padding: 15px;
+        margin: 0 10px 20px;
+        overflow: hidden;
+        background-color: $brown;
+
+        @include tablets {
+            width: 40%;
+        }
+
+        @include phones480 {
+            width: 100%;
+        }
     }
-  }
 }

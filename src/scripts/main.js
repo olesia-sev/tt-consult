@@ -1,20 +1,15 @@
-$(document).ready(function() {
-    $('.sidebar-toggle').click(function(e) {
-        e.preventDefault();
+(function ($) {
+    'use strict';
 
-        $('.sidebar').addClass("open");
-        $(this).addClass('display-none');
-        $('html, body').addClass('no-scroll');
-    });
+    var clickHandler = function (event) {
+        event.preventDefault();
+        $('.sidebar').toggleClass('sidebar--opened');
+        $('.sidebar-toggle__img').toggleClass('sidebar-toggle__img--back');
+        $(this).toggleClass('sidebar-toggle--back');
+        $('html, body').toggleClass('no-scroll');
+    };
 
-    $('.sidebar').swipe({
-        swipeStatus:function(event, phase, direction, distance, duration, fingers)
-        {
-            if (phase == "move" && direction == "left") {
-                $(this).removeClass("open");
-                $('.sidebar-toggle').removeClass('display-none');
-                $('html, body').removeClass('no-scroll');
-            }
-        }
+    $(document).ready(function () {
+        $('.sidebar-toggle').on('click', clickHandler);
     });
-});
+})(jQuery);

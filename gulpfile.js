@@ -7,7 +7,6 @@ const sourcemaps = require('gulp-sourcemaps');
 const del = require('del');
 const browserSync = require('browser-sync').create();
 
-// const svgstore = require('gulp-svgstore');
 const path = require('path');
 
 const paths = {
@@ -58,14 +57,6 @@ function styles() {
         .pipe(gulp.dest(paths.styles.dest))
 }
 
-//svg sprite
-// function svg() {
-//     return gulp
-//         .src('./src/images/icons/*.svg')
-//         .pipe(svgstore())
-//         .pipe(gulp.dest(paths.images.dest));
-// }
-
 //clean
 function clean() {
     return del(paths.root);
@@ -99,12 +90,6 @@ function fonts() {
         .pipe(gulp.dest(paths.fonts.dest));
 }
 
-//Переносим видео
-// function videos() {
-//     return gulp.src(paths.videos.src)
-//         .pipe(gulp.dest(paths.videos.dest));
-// }
-
 //scripts
 function scripts() {
     return gulp.src('src/scripts/*.*')
@@ -120,10 +105,6 @@ exports.clean = clean;
 exports.images = images;
 
 exports.fonts = fonts;
-
-// exports.videos = videos;
-
-// exports.svg = svg;
 
 exports.scripts = scripts;
 
